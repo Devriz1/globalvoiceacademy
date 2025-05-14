@@ -8,7 +8,7 @@
       // Listen for when the animation completes
       preloader.addEventListener('transitionend', () => {
         try {
-          window.location.href = "index.html";
+          window.location.href = "main.html";
         } catch (err) {
           console.error("Redirect failed:", err);
           // Fallback: Click-triggered redirect
