@@ -66,4 +66,17 @@
       transform: scale(1.5);
       opacity: 0;
     }
- 
+ /* Responsive tweaks for extra-small devices */
+@media (max-width: 400px) {
+  .quote:first-child {
+    font-size: 1.5rem;
+  }
+
+  .quote:last-child {
+    font-size: 1rem;
+  }
+
+  #preloader {
+    padding: 10px;
+  }
+}
