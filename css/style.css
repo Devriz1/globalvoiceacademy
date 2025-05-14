@@ -1,106 +1,109 @@
+body {
+    font-family: 'DM Serif Display', serif;
+    margin: 0;
+    padding: 20px;
+    color: #2D2D2D;
+    line-height: 1.6;
+    background-color: #f2f1f1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'DM Serif Display', serif;
-            margin: 0;
-            padding: 0;
-            color: #2D2D2D;
-            line-height: 1.6;
-            background-color: #f2f1f1;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+.logo {
+    margin-bottom: 20px;
+    max-width: 85%;
+}
 
-        .logo {
-            margin-bottom: 30px;
-            max-width: 100%;
-        }
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
 
-        .logo img {
-            max-width: 100%;
-            height: auto;
-        }
+.coming-soon-content {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 15px;
+}
 
-        .coming-soon-content {
-            max-width: 800px;
-            width: 100%;
-        }
+.coming-soon-content h1 {
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    color: rgb(23, 55, 25);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
 
-        .coming-soon-content h1 {
-            font-size: clamp(2rem, 8vw, 3.5rem);
-            color: rgb(23, 55, 25);
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
+#typewriter {
+    min-height: 1.5em;
+    padding: 0 10px;
+}
 
-        #typewriter {
-            min-height: 1.5em; 
-        }
+.coming-soon-content p {
+    font-size: clamp(0.95rem, 3vw, 1.25rem);
+    color: rgb(23, 55, 25);
+    margin: 0 auto 25px;
+    max-width: 600px;
+    padding: 0 10px;
+}
 
-        .coming-soon-content p {
-            font-size: clamp(1rem, 4vw, 1.25rem);
-            color: rgb(23, 55, 25);
-            margin: 0 auto 30px;
-            max-width: 600px;
-            padding: 0 20px;
-        }
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 10px;
+    flex-wrap: wrap;
+}
 
+.social-links a {
+    color: rgb(23, 55, 25);
+    font-size: clamp(1.3rem, 4vw, 2rem);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 8px;
+    /* Add touch-friendly tap targets */
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 30px 20px;
-            flex-wrap: wrap;
-        }
+.social-links a:hover, .social-links a:active {
+    transform: scale(1.1);
+    color: rgb(71, 151, 255);
+}
 
-        .social-links a {
-            color: rgb(23, 55, 25);
-            font-size: clamp(1.5rem, 6vw, 2rem);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
+#typewriter::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+}
 
-        .social-links a:hover {
-            transform: scale(1.2);
-            color: rgb(71, 151, 255);
-        }
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
 
-        #typewriter::after {
-            content: '|';
-            animation: blink 0.7s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50%, 100% { opacity: 1; }
-            25%, 75% { opacity: 0; }
-        }
-
-
-
- /* Specific mobile adjustments */
-        @media (max-width: 768px) {
-            .coming-soon-content h1 {
-                font-size: 1.8rem;
-                padding: 0 5px;
-            }
-            
-            .coming-soon-content p {
-                font-size: 0.95rem;
-            }
-            
-            .social-links {
-                gap: 15px;
-            }
-            
-            .social-links a {
-                font-size: 1.5rem;
-                padding: 8px;
-            }
-        }
+/* Improved mobile adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 15px 10px;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    .coming-soon-content h1 {
+        margin-bottom: 10px;
+    }
+    
+    .coming-soon-content p {
+        padding: 0 5px;
+        margin-bottom: 20px;
+    }
+}
